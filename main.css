@@ -1,0 +1,321 @@
+html,
+body {
+    width:100%;
+    overflow-x:hidden;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    line-height: 1.6;
+}
+* {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+p {
+    font-size: 15px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Global
+==================================================================================================== */
+button {
+    display: none;
+}
+button i {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #cccccc;
+}
+
+/* Colors
+==================================================================================================== */
+.bg-dark {
+    background: #0e1e31;
+    color: #cccccc;
+}
+.bg-dark-second {
+    background: #2f455d;
+    color: #cccccc;
+}
+.bg-light {
+    background: #f2f1ec;
+}
+
+/* Layout
+==================================================================================================== */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-left {
+    justify-content: flex-start;
+}
+.justify-right {
+    justify-content: flex-end;
+}
+.align-center {
+    align-items: center;
+}
+
+/* Background Images
+==================================================================================================== */
+.banner {
+    background: linear-gradient(
+    rgba(14, 30, 49, 1), 
+    rgba(14, 30, 49, 0.30)
+    ), url('img/banner.jpg') no-repeat center center;
+    
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+/* Address
+==================================================================================================== */
+address {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    font-style: normal;
+}
+.address-item + .address-item {
+    margin-left: 15px;
+}
+.address-item > i {
+    margin-right: 5px;
+}
+
+/* Store Hours
+==================================================================================================== */
+.store-hours {
+    font-size: 15px;
+}
+th {
+    text-align: left;
+}
+td {
+    text-align: left;
+}
+
+/* Navbar
+==================================================================================================== */
+.navbar-primary {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar-brand {
+    flex-grow: 1;
+}
+.navbar-social {
+    flex-grow: 8;
+    list-style: none;
+}
+.navbar-primary cite {
+    flex-grow: 4;
+    font-size: 18px;
+    text-align: center;
+    color: #717a7d;
+}
+.navbar-social > li + li {
+    margin-left: 15px;
+}
+.navbar-social > li > a {
+    display: block;
+    width: 30px;
+    padding-top: 2px;
+    border: 1px solid #0e1e31;
+    border-radius: 5px;
+    text-align: center;
+    color: #0e1e31;
+}
+.navbar-brand > img {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 250px;
+}
+.navbar-nav {
+    flex-grow: 10;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.navbar-nav > li > a {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.50s ease-in-out;
+    color: #cccccc;
+}
+.navbar-nav > li > a:hover {
+    color: #ffffff;
+}
+
+/* Banner
+==================================================================================================== */
+.banner h1 {
+    padding-top: 170px;
+    font-size: 45px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #f2f1ec;
+}
+
+/* Services
+==================================================================================================== */
+.service {
+    padding-top: 20px;
+}
+.service-item {
+    flex: 1 2 33.33%;
+    padding: 10px;
+    border: 0.50px solid #0e1e31;
+}
+.service-item + .service-item {
+    margin-left: 16px;
+}
+.service-text {
+    flex-grow: 2;
+}
+.service-img {
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Brands
+==================================================================================================== */
+.brand {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.brands h2 {
+    width: 100%;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.brand-item {
+    flex: 1;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+.brand-item img {
+    width: 100%;
+}
+
+/* Footer
+==================================================================================================== */
+footer p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+
+@media only screen
+    and (max-width: 1025px) {
+        .service-item {
+            flex-direction: column;
+            text-align: center;
+        }
+        .service-text {
+            order: 2;
+        }
+        .service-img {
+            width: 190px;
+            margin: 0 auto;
+            order: 1;
+        }
+    }
+
+@media only screen 
+    and (max-width: 768px) {
+        address {
+            display: none;
+        }
+        .navbar-primary {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-primary .flex {
+            flex-direction: column;
+        }
+        .navbar-brand > img{
+            padding-top: 10px;
+            width: 200px;
+        }
+        .navbar-social.flex {
+            flex-direction: row;
+        }
+        .store-hours {
+            display: none;
+        }
+    }
+
+@media only screen 
+    and (max-width: 415px) {
+        .navbar-menu {
+            display: block;
+        }
+        .navbar-nav.flex {
+            height: 0px;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: center;
+        }
+        .banner {
+            height: 550px;
+        }
+        .banner h1 {
+            font-size: 23px;
+        }
+        .service .flex {
+            flex-direction: column;
+            margin: 0;
+            border: 0;
+        }
+        .brand .flex {   
+            flex-direction: column;
+        }
+        .brands h2 {
+            padding-left: 0;
+            text-align: center;
+        }
+        .brand-item > img {
+            width: 200px;
+        }
+        .brand-item + .brand-item {
+            margin-top: 20px;
+        }
+        footer p {
+            font-size: 14px;
+        }
+    }
