@@ -1,4 +1,4 @@
-html,
+fhtml,
 body {
     width:100%;
     overflow-x:hidden;
@@ -37,6 +37,10 @@ ul {
     padding-bottom: 15px;
     color: #cccccc;
 }
+.learn-more {
+    font-size: 13px;
+    text-decoration: none;
+}
 
 /* Colors
 ==================================================================================================== */
@@ -57,6 +61,9 @@ ul {
 .container {
     width: 85%;
     margin: 0 auto;
+}
+.container.small {
+    width: 70%;
 }
 .flex {
     display: flex;
@@ -79,6 +86,9 @@ ul {
 .align-center {
     align-items: center;
 }
+.row-reverse {
+    flex-direction: row-reverse;
+}
 
 /* Background Images
 ==================================================================================================== */
@@ -87,12 +97,21 @@ ul {
     rgba(14, 30, 49, 1), 
     rgba(14, 30, 49, 0.30)
     ), url('img/banner.jpg') no-repeat center center;
-    
     background-size: cover;
     width: 100%;
     height: 500px;
 }
-
+.bg-installation {
+    width: 100%;
+    height: 300px;
+    background: url(img/installation.jpg) no-repeat center center;
+    background-size: cover;
+}
+.bg-cleaning {
+    height: 300px;
+    background: url(img/cleaning.jpg) no-repeat center center;
+    background-size: cover;
+}
 /* Address
 ==================================================================================================== */
 address {
@@ -186,23 +205,23 @@ td {
     color: #f2f1ec;
 }
 
-/* Services
+/* Offering
 ==================================================================================================== */
-.service {
+.offering {
     padding-top: 20px;
 }
-.service-item {
+.offering-item {
     flex: 1 2 33.33%;
     padding: 10px;
     border: 0.50px solid #0e1e31;
 }
-.service-item + .service-item {
+.offering-item + .offering-item {
     margin-left: 16px;
 }
-.service-text {
+.offering-text {
     flex-grow: 2;
 }
-.service-img {
+.offering-img {
     width: 100%;
     flex-grow: 1;
 }
@@ -237,89 +256,151 @@ footer p {
     text-align: center;
 }
 
+/* Service
+==================================================================================================== */
+.services {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.service-item + .service-item {
+    margin-top: 30px;
+}
+.service-text {
+    flex: 1;
+    margin-right: 20px;
+}
+.service-text > h1 {
+    line-height: 1.2;
+    font-size: 35px;
+    text-align: right;
+}
+.service-text > p {
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    border-left: 2.5px solid #2f455d;
+    margin-top: 10px;
+}
+.service-img {
+    flex: 1;
+}
+.row-reverse .service-text {
+    margin-left: 40px;
+}
+.row-reverse .service-text > h1{
+    flex: 1;
+    text-align: left;
+}
+.row-reverse .service-text > p {
+    margin-right: 100px;
+}
+.row-reverse .service-img {
+    flex: 1;
+}
 
 
 
 @media only screen
-    and (max-width: 1230px) {
-        .service-item {
-            flex-direction: column;
-            text-align: center;
-        }
-        .service-text {
-            order: 2;
-        }
-        .service-img {
-            width: 190px;
-            margin: 0 auto;
-            order: 1;
-        }
+and (max-width: 1230px) {
+    .offering-item {
+        flex-direction: column;
+        text-align: center;
     }
+    .offering-text {
+        order: 2;
+    }
+    .offering-img {
+        width: 190px;
+        margin: 0 auto;
+        order: 1;
+    }
+    .container.small {
+        width: 90%;
+    }
+    .service-item {
+        flex-direction: column-reverse;
+    }
+    .service-text > h1 {
+        text-align: left;
+    }
+    .row-reverse .service-text {
+        margin-left: 0;
+    }
+    .row-reverse .service-text > p {
+        margin-right: 0;
+    }
+    .service-img {
+        height: 410px;
+    }
+}
 
 @media only screen 
-    and (max-width: 976px) {
-        .container {
-            width: 90%;
-        }
-        address {
-            display: none;
-        }
-        .navbar-primary {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        .navbar-primary .flex {
-            flex-direction: column;
-        }
-        .navbar-brand > img{
-            padding-top: 10px;
-            width: 200px;
-        }
-        .navbar-social.flex {
-            flex-direction: row;
-        }
-        .store-hours {
-            display: none;
-        }
-        .banner h1 {
-            font-size: 23px;
-        }
-        .service .flex {
-            flex-direction: column;
-            margin: 0;
-            border: 0;
-        }
+and (max-width: 976px) {
+    .container {
+        width: 90%;
     }
+    address {
+        display: none;
+    }
+    .navbar-primary {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-primary .flex {
+        flex-direction: column;
+    }
+    .navbar-brand > img{
+        padding-top: 10px;
+        width: 200px;
+    }
+    .navbar-social.flex {
+        flex-direction: row;
+    }
+    .store-hours {
+        display: none;
+    }
+    .banner h1 {
+        font-size: 23px;
+    }
+    .offering .flex {
+        flex-direction: column;
+        margin: 0;
+        border: 0;
+    }
+}
 
 @media only screen 
-    and (max-width: 415px) {
-        .navbar-menu {
-            display: block;
-        }
-        .navbar-nav.flex {
-            height: 0px;
-            overflow: hidden;
-            flex-direction: column;
-            text-align: center;
-        }
-        .banner {
-            height: 550px;
-        }
-        
-        .brand .flex {   
-            flex-direction: column;
-        }
-        .brands h2 {
-            padding-left: 0;
-            text-align: center;
-        }
-        .brand-item > img {
-            width: 200px;
-        }
-        .brand-item + .brand-item {
-            margin-top: 20px;
-        }
-        footer p {
-            font-size: 14px;
-        }
+and (max-width: 410px) {
+    .navbar-menu {
+        display: block;
     }
+    .navbar-nav.flex {
+        height: 0px;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner {
+        height: 550px;
+    }
+    
+    .brand .flex {   
+        flex-direction: column;
+    }
+    .brands h2 {
+        padding-left: 0;
+        text-align: center;
+    }
+    .brand-item > img {
+        width: 200px;
+    }
+    .brand-item + .brand-item {
+        margin-top: 20px;
+    }
+    footer p {
+        font-size: 14px;
+    }
+    .service-img {
+        height: 225px;
+    }
+}
