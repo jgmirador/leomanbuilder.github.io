@@ -258,6 +258,9 @@ footer p {
 
 @media only screen 
     and (max-width: 768px) {
+        .container {
+            width: 90%;
+        }
         address {
             display: none;
         }
