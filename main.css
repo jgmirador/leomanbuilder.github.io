@@ -241,7 +241,7 @@ footer p {
 
 
 @media only screen
-    and (max-width: 1025px) {
+    and (max-width: 1230px) {
         .service-item {
             flex-direction: column;
             text-align: center;
@@ -257,7 +257,7 @@ footer p {
     }
 
 @media only screen 
-    and (max-width: 768px) {
+    and (max-width: 976px) {
         .container {
             width: 90%;
         }
@@ -281,6 +281,14 @@ footer p {
         .store-hours {
             display: none;
         }
+        .banner h1 {
+            font-size: 23px;
+        }
+        .service .flex {
+            flex-direction: column;
+            margin: 0;
+            border: 0;
+        }
     }
 
 @media only screen 
@@ -297,14 +305,7 @@ footer p {
         .banner {
             height: 550px;
         }
-        .banner h1 {
-            font-size: 23px;
-        }
-        .service .flex {
-            flex-direction: column;
-            margin: 0;
-            border: 0;
-        }
+        
         .brand .flex {   
             flex-direction: column;
         }
