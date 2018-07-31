@@ -112,6 +112,16 @@ ul {
     background: url(img/cleaning.jpg) no-repeat center center;
     background-size: cover;
 }
+.bg-retail {
+    height: 300px;
+    background: url(img/retail.jpg) no-repeat center center;
+    background-size: cover;
+}
+.bg-cartronics {
+    height: 300px;
+    background: url(img/cartronics.jpg) no-repeat center center;
+    background-size: cover;
+}
 /* Address
 ==================================================================================================== */
 address {
@@ -276,7 +286,7 @@ footer p {
 }
 .service-text > p {
     padding-top: 5px;
-    padding-left: 25px;
+    padding-left: 35px;
     padding-bottom: 5px;
     border-left: 2.5px solid #2f455d;
     margin-top: 10px;
@@ -298,6 +308,26 @@ footer p {
     flex: 1;
 }
 
+/* About
+==================================================================================================== */
+.about {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+}
+.about-text > p {
+    margin-top: 5px;
+}
+.about-img {
+    flex: 1;
+    margin-top: 10px;
+}
+.map-img {
+    flex: 1;
+}
 
 
 @media only screen
@@ -366,6 +396,13 @@ and (max-width: 976px) {
         flex-direction: column;
         margin: 0;
         border: 0;
+    }
+    .about-item {
+        flex-direction: column;
+    }
+    .about-text {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 }
 
