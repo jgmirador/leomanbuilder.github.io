@@ -30,11 +30,11 @@ ul {
 /* Global
 ==================================================================================================== */
 .navbar-menu {
-    padding-top: 15px;
-    padding-bottom: 15px;
     display: none;
 }
 .navbar-menu i {
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #cccccc;
 }
 
