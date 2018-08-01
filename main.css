@@ -1,6 +1,8 @@
-fhtml,
+html,
 body {
+    height: 100%;
     width:100%;
+    margin: 0;
     overflow-x:hidden;
 }
 html {
@@ -40,6 +42,15 @@ ul {
 .learn-more {
     font-size: 13px;
     text-decoration: none;
+}
+.about {
+    min-height: 100%;
+}
+.contact {
+    min-height: 100%;
+}
+.services {
+    min-height: 100%;
 }
 
 /* Colors
@@ -260,7 +271,11 @@ td {
 
 /* Footer
 ==================================================================================================== */
-footer p {
+footer {
+    max-height: 100%;
+    margin-bottom: -50px;
+}
+.footer p {
     padding-top: 20px;
     padding-bottom: 20px;
     text-align: center;
