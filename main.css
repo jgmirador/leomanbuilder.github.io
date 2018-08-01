@@ -329,6 +329,20 @@ footer p {
     flex: 1;
 }
 
+/* Contact Us
+==================================================================================================== */
+.contact-header h2 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.contact-info {
+    margin-bottom: 20px; 
+}
+.frame {
+    width: 100%;
+    height: 500px;
+}
+
 
 @media only screen
 and (max-width: 1230px) {
@@ -361,6 +375,16 @@ and (max-width: 1230px) {
     }
     .service-img {
         height: 410px;
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+    .contact-info .address-item {
+        font-size: 13px;
+    }
+    .contact-info .address-item + .address-item {
+        margin-top: 5px;
+        margin-left: 0;
     }
 }
 
@@ -403,6 +427,9 @@ and (max-width: 976px) {
     .about-text {
         margin-right: 0;
         margin-bottom: 5px;
+    }
+    .frame {
+        height: 300px;
     }
 }
 

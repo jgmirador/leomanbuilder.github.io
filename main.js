@@ -1,10 +1,17 @@
-document.getElementById('toggle-menu').onclick = function() {
-    var menuToggle = document.getElementById('menu')
-    
-    if (document.getElementById('menu').style.height == 0 || document.getElementById('menu').style.height == "0px") {
-        document.getElementById('menu').style.height = "350px";
-        document.getElementById('menu').style.transition = "1s";
+var menuToggle = true;
+
+$('#toggle-menu').click(function() {
+    if (menuToggle) {
+        $('#menu').animate({
+            height:"350px"
+        }, 700, function() {
+            menuToggle = false;
+        })
     } else {
-        document.getElementById('menu').style.height = 0;
+        $('#menu').animate({
+            height:"0"
+        }, 700, function() {
+            menuToggle = true;
+        })
     }
-}
+})
